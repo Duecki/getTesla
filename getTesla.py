@@ -39,7 +39,7 @@ def poicheck(latitude, longitude, poiwindow=0.01):
 	for p in poilist['poi']:
 		plongitude = float(p['longitude'])
 		platidute = float(p['latitude'])
-		 longitude < (plongitude+0.01) and longitude > (plongitude-0.01) and latitude < (platidute+0.01) and latitude > (platidute-0.01):
+		longitude < (plongitude+0.01) and longitude > (plongitude-0.01) and latitude < (platidute+0.01) and latitude > (platidute-0.01):
 			if debugmode:
 				print "setzen des POI Flags"
 			logwrite("setzte POI Flag")
