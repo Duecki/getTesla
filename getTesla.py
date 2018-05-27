@@ -40,7 +40,7 @@ def poicheck(latitude, longitude, poiwindow=0.01):
 	for p in poilist['poi']:
 		plongitude = float(p['longitude'])
 		platidute = float(p['latitude'])
-        '''Check'''
+        '''Check'''https://github.com/Duecki/getTesla.git
         longitude < (plongitude+0.01) and longitude > (plongitude-0.01) and latitude < (platidute+0.01) and latitude > (platidute-0.01):
 			if debugmode:
 				print "setzen des POI Flags"
@@ -155,7 +155,7 @@ def gettesla():
 	return tesladata
 
 
-'''Begin des Main programms'''
+'''Begin des Main programms!'''
 startzeit = time.time()
 laufzeit = 0
 data = []
