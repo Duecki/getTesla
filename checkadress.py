@@ -7,8 +7,9 @@ import json
 import time
 from pprint import pprint
 import googlemaps
-import MySQLdb
 import sys
+import os
+#import MySQLdb
 
 def mongoconnect():
     start = time.time()
@@ -267,8 +268,15 @@ print "SQLLimit:",mysqllimit
 if debugmode:
     print "einlesen der Config"
 #	try:
-with open ("$HOME/.getTeslaconfig.json", 'r') as f:
-    getTeslaconf = json.load(f)
+homedir = os.environ['HOME'] + "/.getTeslaconfig.json"
+
+try:
+    with open (homedir, 'r') as f:
+        getTeslaconf = json.load(f)
+except:
+    print "configfile error. Expect:",homedir
+
+sys.exit(0)
 
 DB_SERVER = getTeslaconf['DB_SERVER']
 DB_USER = getTeslaconf['DB_USER']
