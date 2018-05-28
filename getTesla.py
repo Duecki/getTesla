@@ -174,7 +174,7 @@ if True:
 	if debugmode:
 		print "einlesen der Config"
 	try:
-		with open ('/home/ubuntu/tesla/getTeslaconfig.json', 'r') as f:
+		with open ('$HOME/.getTeslaconfig.json', 'r') as f:
 			getTeslaconf = json.load(f)
 	except:
 		print "configfile kann nicht geöffnet werden"
