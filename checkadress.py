@@ -269,14 +269,16 @@ if debugmode:
     print "einlesen der Config"
 #	try:
 homedir = os.environ['HOME'] + "/.getTeslaconfig.json"
-
 try:
     with open (homedir, 'r') as f:
         getTeslaconf = json.load(f)
 except:
     print "configfile error. Expect:",homedir
 
-sys.exit(0)
+if debugmode:
+    pprint (getTeslaconf)
+
+
 
 DB_SERVER = getTeslaconf['DB_SERVER']
 DB_USER = getTeslaconf['DB_USER']
