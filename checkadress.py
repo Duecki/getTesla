@@ -216,9 +216,12 @@ def mysqlcheck():
     db.close()
 
 
+#######################################################################################################
+#######################################################################################################
 
 ###start Hauptprogram
 
+#Vorbereitung von Variablen
 
 debugmode = False
 swmongocheck = False
@@ -235,9 +238,6 @@ mysqljobs = 0
 mongojobs = 0
 
 
-
-#print "länge",len(sys.argv)
-#ufruf = sys.argv
 
 if len(sys.argv) > 1:
     print "Programmstart"
@@ -261,21 +261,22 @@ for startpara in sys.argv:
     if startpara == "mysqllimit":
         mysqllimit = sys.argv[i]
 
-
-print "SQLLimit:",mysqllimit
+if debugmode:
+    print "MySQLLimit:",mysqllimit
 
 #Einlesen der Configuration
 if debugmode:
     print "einlesen der Config"
-#	try:
-homedir = os.environ['HOME'] + "/.getTeslaconfig.json"
+
 try:
+    homedir = os.environ['HOME'] + "/.getTeslaconfig.json"
     with open (homedir, 'r') as f:
         getTeslaconf = json.load(f)
 except:
     print "configfile error. Expect:",homedir
 
 if debugmode:
+    print "Configinfos from configfile"
     pprint (getTeslaconf)
 
 
