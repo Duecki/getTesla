@@ -1,0 +1,18 @@
+{
+#configfile should be located in HOME
+"TESLA_EMAIL": "<TESLA USER MAILADRESS>",
+"TESLA_PASSWORD": "<TESLA PWD>",
+"DB_SERVER": "<MQSQL SERVER ADRESS>",
+"DB_USER": "<MYSQL USER>",
+"DB_PWD": "<MYSQL PWD>",
+"DB_DATENBANK": "<MYSQL DB NAME>",
+"mongoDB_SERVER": "<MONGODB SERVER ADRESS>",
+"mongoDB_DATENBANK": "<MONGO DB NAME>",
+"mongoDB_USER": "<MONGO USER>",
+"mongoDB_PWD": "<MONGO PWD>",
+"mongoDB_PORT": "27017",
+"MAX_RUNTIME": "280",
+"logfile": "/home/ubuntu/tesla/getTesla.log",
+"glogin": "<GOOGLE API KEY>",
+"poilistfile": "<location of poilistfile>"
+}
