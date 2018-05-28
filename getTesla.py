@@ -152,6 +152,10 @@ def gettesla():
 		print "getteslalaufzeit: ",round(time.time()-funktionsstart,2)
 	return tesladata
 
+#######################################################################################################
+#######################################################################################################
+
+###start Hauptprogram
 
 '''Begin des Main programms!'''
 startzeit = time.time()
@@ -174,8 +178,11 @@ if True:
 	if debugmode:
 		print "einlesen der Config"
 	try:
-		with open ('$HOME/.getTeslaconfig.json', 'r') as f:
-			getTeslaconf = json.load(f)
+	    homedir = os.environ['HOME'] + "/.getTeslaconfig.json"
+	    with open (homedir, 'r') as f:
+	        getTeslaconf = json.load(f)
+#		with open ('$HOME/.getTeslaconfig.json', 'r') as f:
+#			getTeslaconf = json.load(f)
 	except:
 		print "configfile kann nicht geöffnet werden"
 		sys.exit(1)
@@ -230,12 +237,6 @@ while run:
 		print "Reslaufzeit:", MAX_RUNTIME-laufzeit
 	if laufzeit > MAX_RUNTIME:
 		run = False
-
-if False:
-	with open('data.txt', 'wa') as outfile:
-	    json.dump(data, outfile)
-	with open('data.txt', 'a') as outfile:
-		outfile.write("\n")
 
 
 if writemysql:
