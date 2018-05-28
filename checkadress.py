@@ -9,7 +9,7 @@ from pprint import pprint
 import googlemaps
 import sys
 import os
-#import MySQLdb
+import MySQLdb
 
 def mongoconnect():
     start = time.time()
